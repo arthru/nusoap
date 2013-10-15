@@ -902,7 +902,7 @@ class nusoap_base {
 * @access   public
 */
 function timestamp_to_iso8601($timestamp,$utc=true){
-	$datestr = date('Y-m-d\TH:i:sO',$timestamp);
+	$datestr = date('Y-m-d\TH:i:sP',$timestamp);
 	$pos = strrpos($datestr, "+");
 	if ($pos === FALSE) {
 		$pos = strrpos($datestr, "-");
